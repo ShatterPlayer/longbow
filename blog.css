@@ -1,0 +1,158 @@
+/* Wykonał Michał Karpierz */
+:root {
+  --pink: #d72567;
+}
+
+.header-1 {
+  font-size: 30px;
+  color: var(--pink);
+  text-align: center;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1150px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.category {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  width: 150px;
+  height: 120px;
+  border: 1px solid var(--pink);
+  margin: 5px;
+}
+
+.category__text {
+  text-align: center;
+}
+
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+.category__image,
+.gallery__header-image {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(65%) saturate(3585%)
+    hue-rotate(323deg) brightness(87%) contrast(92%);
+  height: 40%;
+}
+
+.category__articles {
+  color: #a3acc3;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1150px;
+  margin: 100px auto;
+  border-top: 2px solid #eeeeee;
+}
+
+.gallery__header {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(-120%);
+  display: flex;
+  align-items: center;
+}
+
+.gallery__more {
+  text-decoration: none;
+  position: absolute;
+  bottom: -20px;
+  right: 25px;
+  color: var(--pink);
+  font-size: 20px;
+}
+
+.gallery__header-image {
+  height: 40px;
+  padding: 5px;
+}
+
+.gallery-item {
+  text-decoration: none;
+  color: inherit;
+  height: 500px;
+  width: 260px;
+  border: 1px solid #d3d3d3;
+  margin: 10px;
+}
+
+.gallery-item--large {
+  width: 540px;
+}
+
+.gallery-item__image {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.gallery-item__image-element {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery-item__text-wrapper {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.gallery-item__header-text {
+  font-weight: bold;
+  color: var(--pink);
+}
+
+.gallery-item__text {
+  font-size: 14px;
+  color: #333333;
+}
+
+@media only screen and (max-width: 1170px) {
+  .categories {
+    width: 90vw;
+    justify-content: center;
+  }
+
+  .gallery {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 935px) {
+  .gallery-item {
+    width: 100%;
+  }
+
+  .gallery-item__image-element {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .gallery-item__image-element {
+    width: unset;
+  }
+}

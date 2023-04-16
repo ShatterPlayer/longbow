@@ -1,0 +1,85 @@
+/* Wykonał Michał Karpierz */
+.slider {
+  width: 100vw;
+  height: 500px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.slider--compact {
+  width: 1172px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.slider__slide {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slider__slide--visible {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slider__switcher {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.slider__switcher-circle {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 1s;
+  outline: none;
+}
+
+.slider__switcher-circle:focus {
+  border: 3px solid #ddd;
+}
+
+.slider__switcher-circle--active {
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 1172px) {
+  .slider--compact {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .slider {
+    height: 40vw;
+  }
+
+  .slider--compact {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .slider {
+    height: 300px;
+  }
+
+  .slider--compact {
+    height: 300px;
+  }
+}
